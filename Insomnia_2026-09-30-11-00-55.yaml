@@ -1,0 +1,98 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Quarkus File Management API
+meta:
+  id: wrk_4a414267379d430780f5386e5eaacfef
+  created: 1790776125707
+  modified: 1790776125707
+  description: ""
+collection:
+  - name: Arquivos
+    meta:
+      id: fld_737c6b1d50014a5cb001edf2b5686966
+      created: 1727700000000
+      modified: 1790776125710
+      sortKey: -1000000000
+      description: Endpoints de gerenciamento de arquivos
+    children:
+      - url: "{{ base_url }}/files/upload"
+        name: Upload de Arquivo
+        meta:
+          id: req_68d535814ce84b6bbed6034fefe375df
+          created: 1790776125711
+          modified: 1790776530769
+          isPrivate: false
+          description: ""
+          sortKey: -1000000000
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: file
+              value: ""
+              description: ""
+              disabled: false
+              fileName: C:\Users\thiag\Downloads\go-todo.zip
+              type: file
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/files/f24e94de-6fa6-48d4-960c-7e01ee6d0778.zip"
+        name: Download de Arquivo
+        meta:
+          id: req_41e973eb3f23461390d77dfb93d1b664
+          created: 1790776125712
+          modified: 1790776813149
+          isPrivate: false
+          description: ""
+          sortKey: -900000000
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/files"
+        name: Listar Arquivos
+        meta:
+          id: req_6af9fe3665444111aaaecc41b6ab1c69
+          created: 1790776125713
+          modified: 1790776125713
+          isPrivate: false
+          description: ""
+          sortKey: -800000000
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_63273a920bc08126f7901a15c1bf840836ed7293
+    created: 1790776125714
+    modified: 1790776125714
+environments:
+  name: Base Environment
+  meta:
+    id: env_62461dddd44b4185aca605b0bb5b595c
+    created: 1727700000000
+    modified: 1790776125709
+    isPrivate: false
+  data:
+    base_url: http://localhost:8080
